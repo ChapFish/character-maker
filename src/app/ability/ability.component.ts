@@ -38,4 +38,8 @@ export class AbilityComponent implements OnInit {
       this.abilityFromINT = usedPoints;
     }
   }
+
+  keyupAbilityDetail(value, selectedAbility: any[]): void{
+    selectedAbility[1] = (value == "") ? "detail" : String(value);
+  }
 }
