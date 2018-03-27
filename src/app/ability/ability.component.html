@@ -1,0 +1,57 @@
+<div class="ability card">
+  <h2>Set Your Searcher's Abilities.</h2>
+  <p>You have ability point depending on EDU and INT. Use these point and decide his or her abilities.</p>
+  <h3>使用可能ポイント</h3>
+  <p>EDU : {{searcher.status.EDU*20 - abilityFromEDU}} / {{searcher.status.EDU*20}}</p>
+  <p>INT : {{searcher.status.INT*10 - abilityFromINT}} / {{searcher.status.INT*10}}</p>
+  <div class="ability-section clearfix">
+    <table class="ability-table">
+      <tr>
+        <th class="ability-name">技能名</th>
+        <th class="ability-init">初期値</th>
+        <th class="ability-EDU">EDU由来</th>
+        <th class="ability-INT">INT由来</th>
+        <th class="ability-sum">合計</th>
+      </tr>
+      <tr *ngFor="let ability of searcher.firstAbilities">
+        <td class="ability-name">{{ability[0]}}<input *ngIf="ability[1]" [(ngModel)]="ability[1]" type="text"></td>
+        <td class="ability-init">{{ability[2]}}</td>
+        <td class="ability-EDU"><input #EDU1 (keyup)="keyupAbility(EDU1.value, 3, ability)"></td>
+        <td class="ability-INT"><input #INT1 (keyup)="keyupAbility(INT1.value, 4, ability)"></td>
+        <td class="ability-sum">{{ability[5]}}</td>
+      </tr>
+    </table>
+    <table class="ability-table">
+      <tr>
+        <th class="ability-name">技能名</th>
+        <th class="ability-init">初期値</th>
+        <th class="ability-EDU">EDU由来</th>
+        <th class="ability-INT">INT由来</th>
+        <th class="ability-sum">合計</th>
+      </tr>
+      <tr *ngFor="let ability of searcher.secondAbilities">
+        <td class="ability-name">{{ability[0]}}<input *ngIf="ability[1]" [(ngModel)]="ability[1]" type="text"></td>
+        <td class="ability-init">{{ability[2]}}</td>
+        <td class="ability-EDU"><input #EDU2 (keyup)="keyupAbility(EDU2.value, 3, ability)"></td>
+        <td class="ability-INT"><input #INT2 (keyup)="keyupAbility(INT2.value, 4, ability)"></td>
+        <td class="ability-sum">{{ability[5]}}</td>
+      </tr>
+    </table>
+    <table class="battleAbility-table">
+      <tr>
+        <th class="ability-name">技能名</th>
+        <th class="ability-init">初期値</th>
+        <th class="ability-EDU">EDU由来</th>
+        <th class="ability-INT">INT由来</th>
+        <th class="ability-sum">合計</th>
+      </tr>
+      <tr *ngFor="let battleAbility of searcher.battleAbilities">
+        <td class="ability-name">{{battleAbility[0]}}</td>
+        <td class="ability-init">{{battleAbility[1]}}</td>
+        <td class="ability-EDU"><input [(ngModel)]="battleAbility[2]"></td>
+        <td class="ability-INT"><input [(ngModel)]="battleAbility[3]"></td>
+        <td class="ability-sum"></td>
+      </tr>
+    </table>
+  </div>
+</div>

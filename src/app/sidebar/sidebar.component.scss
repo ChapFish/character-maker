@@ -1,0 +1,28 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #282C3C;
+  color: white;
+  p{
+    margin-left: 20px;
+    margin-top: 30px;
+    span{
+      font-size: 1.2rem;
+    }
+  }
+  ul{
+    margin-top: 40px;
+    .sidebar-content{
+      padding-left: 20px;
+      line-height: 40px;
+    }
+    .sidebar-content:hover{
+      background-color: rgba(255,255,255,0.3);
+    }
+    .selected{
+      background-color: rgba(255,255,255,0.3);      
+    }
+  }
+}

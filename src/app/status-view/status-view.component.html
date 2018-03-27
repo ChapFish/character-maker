@@ -1,0 +1,36 @@
+<div class="status-view clearfix">
+
+  <div class="card searcher-name">
+    <STRONG>Name</STRONG>
+    <p class="name">{{searcher.name}}</p>
+  </div>
+
+  <div class="card searcher-status">
+    <STRONG>Status</STRONG>
+    <ul class="status-contents clearfix">
+      <li class="state">STR : {{searcher.status.STR}}</li>
+      <li class="state">DEX : {{searcher.status.DEX}}</li>
+      <li class="state">INT : {{searcher.status.INT}}</li>
+      <li class="state">CON : {{searcher.status.CON}}</li>
+      <li class="state">APP : {{searcher.status.APP}}</li>
+    </ul>
+    <ul class="status-contents clearfix">
+      <li class="state">POW : {{searcher.status.POW}}</li>
+      <li class="state">SIZ : {{searcher.status.SIZ}}</li>
+      <li class="state">SAN : {{searcher.status.SAN}}</li>
+      <li class="state">EDU : {{searcher.status.EDU}}</li>
+    </ul>
+  </div>
+
+  <div class="card searcher-roll">
+    <STRONG>Roll</STRONG>
+    <ul class="roll-contents clearfix">
+      <li class="roll">アイデア : {{searcher.statusRoll.idea}}</li>
+      <li class="roll">幸運 : {{searcher.statusRoll.luck}}</li>
+    </ul>
+    <ul class="roll-contents clearfix">
+      <li class="roll">知識 : {{searcher.statusRoll.knowledge}}</li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+.status-view{
+  height: 100px;
+
+  .card{
+    box-sizing: border-box;
+    height: 90px;
+    float: left;
+  }
+
+  p{
+    margin: 0;
+    line-height: 15px;
+  }
+
+  .searcher-name{
+    width: 250px;
+    border-left: solid 5px #469B98;
+    .name{
+      font-size: 2.0rem;
+      margin-top: 20px;
+    }
+  }
+  .searcher-status{
+    width: 500px;
+    border-left: solid 5px #469B98;
+    li:not(:first-child){
+      margin-left: 10px;
+    }
+    .state{
+      float: left;
+      width: 80px;
+      line-height: 0.8rem;
+    }
+  }
+  .searcher-roll{
+    width: 250px;
+    border-left: solid 5px #469B98;
+    li:not(:first-child){
+      margin-left: 10px;
+    }
+    .roll{
+      float: left;
+      width: 90px;
+      line-height: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<div class="dice-roll">
+  <div class="card dice-roll-section">
+    <h2>
+      Welcome to Character Maker for CALL of CTHULU 2010.
+    </h2>
+    <p>
+      Roll the dices and Start to make searcher of CTHULHU's world...<br>
+      You have <STRONG>three</STRONG> chances to change the roll.
+    </p>
+    <a href="#" class="btn" (click)="onClick()">Dice Roll</a>
+    <p>
+      This is your searcher's status!
+    </p>
+    <div class="clearfix">
+      <div class="result-contents">
+        <ul>
+          <li>STR : {{searcher.status.STR}}</li>
+          <li>DEX : {{searcher.status.DEX}}</li>
+          <li>INT : {{searcher.status.INT}}</li>
+          <li>CON : {{searcher.status.CON}}</li>
+          <li>APP : {{searcher.status.APP}}</li>
+        </ul>
+      </div>
+      <div class="result-contents">
+        <ul>
+          <li>POW : {{searcher.status.POW}}</li>
+          <li>SIZ : {{searcher.status.SIZ}}</li>
+          <li>SAN : {{searcher.status.SAN}}</li>
+          <li>EDU : {{searcher.status.EDU}}</li>
+        </ul>
+      </div>
+      <div class="result-contents">
+        <ul>
+            <li class="roll">アイデア : {{searcher.statusRoll.idea}}</li>
+            <li class="roll">幸運 : {{searcher.statusRoll.luck}}</li>
+            <li class="roll">知識 : {{searcher.statusRoll.knowledge}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card result-section">
+    <h2>
+      Check the Status and Go to Next Step.
+    </h2>
+    <p>
+      If you decide to use this result, tap CONFIRM and go to set his or her abilities.
+    </p>
+    <a href="#" class="btn confirm-btn">CONFIRM</a>
+  </div>
+</div>
