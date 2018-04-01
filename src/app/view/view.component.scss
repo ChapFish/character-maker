@@ -1,0 +1,101 @@
+ul, li{
+  margin: 5px 0 0 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+.row{
+  margin: 0 10px;
+}
+.underLined{
+  padding-bottom: 10px;
+  border-bottom: solid 1px #BFBFBF;
+}
+
+.view{
+  h2{
+    margin: 10px 0;
+    padding-left: 10px;
+    color: white;
+    background-color: gray;
+  }
+  .left-section{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    border-right: solid 1px #BFBFBF;
+    .first-row{
+      .basicInformation{
+        width: 40%;
+        float: left;
+      }
+      .status{
+        width: 50%;
+        margin-left: 10px;
+        float: left;
+        .state{
+          width: 90px;
+          float: left;
+        }
+      }
+    }
+    .second-row{
+      table{
+        font-size: 0.8rem;
+        tr:nth-child(even){
+          background-color: #EFEFEF;
+        }
+        .ability-sum{
+          text-align: center;
+        }
+      }
+      .ability{
+        float: left;
+        .ability-table{
+          float: left;
+          width: 150px;  
+        }
+        .secondTable, .thirdTable{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .right-section{
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    .third-row{
+      .left-subSection{
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      .right-subSection{
+        float: left;
+        width: 45%;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.btn{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #394F98;
+  border: solid 2px #394F98;
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn:hover{
+  background-color: #394F98;
+  color: white;
+}
+@media print{
+  .print-section{
+    display: none !important;
+  }
+}

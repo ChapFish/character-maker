@@ -9,6 +9,9 @@ import { SearcherService } from './searcher.service';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { StatusViewComponent } from './status-view/status-view.component';
 import { AbilityComponent } from './ability/ability.component';
+import { CharacterComponent } from './character/character.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { ViewComponent } from './view/view.component';
 
 
 @NgModule({
@@ -17,11 +20,14 @@ import { AbilityComponent } from './ability/ability.component';
     DiceRollComponent,
     SidebarComponent,
     StatusViewComponent,
-    AbilityComponent
+    AbilityComponent,
+    CharacterComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [SearcherService],
   bootstrap: [AppComponent]

@@ -22,9 +22,11 @@ export class SearcherService {
       SIZ: this.get2d6()+6, 
       EDU: this.get3d6()+3};
     this.searcher.status.SAN = this.searcher.status.POW*5;
-    this.searcher.statusRoll = {idea: this.searcher.status.INT*5,
-     luck: this.searcher.status.POW*5,
-     knowledge: this.searcher.status.EDU*5};
+    this.searcher.statusRoll = {
+      idea: this.searcher.status.INT*5,
+      luck: this.searcher.status.POW*5,
+      knowledge: this.searcher.status.EDU*5
+    };
   }
 
   get3d6(): number {

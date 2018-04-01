@@ -3,9 +3,17 @@
     Character Maker for<br><span>CALL of CTHULU</span>
   </p>
   <ul>
-    <li class="sidebar-content selected"><i class="fas fa-user fa-fw"></i> Start</li>
-    <li class="sidebar-content"><i class="fas fa-chart-bar fa-fw"></i> Ability</li>
-    <li class="sidebar-content"><i class="far fa-edit fa-fw"></i> Character</li>
-    <li class="sidebar-content"><i class="fas fa-check-circle fa-fw"></i> View</li>
+    <a routerLink="/start">
+      <li class="sidebar-content" (click)="selecting(0)" [ngClass]="{selected: onSelect(0)}"><i class="fas fa-user fa-fw"></i> Start</li>
+    </a>
+    <a routerLink="/ability">
+      <li class="sidebar-content" (click)="selecting(1)" [ngClass]="{selected: onSelect(1)}"><i class="fas fa-chart-bar fa-fw"></i> Ability</li>
+    </a>
+    <a routerLink="/character">
+      <li class="sidebar-content" (click)="selecting(2)" [ngClass]="{selected: onSelect(2)}"><i class="far fa-edit fa-fw"></i> Character</li>
+    </a>
+    <a routerLink="/view">
+      <li class="sidebar-content" (click)="selecting(3)" [ngClass]="{selected: onSelect(3)}"><i class="fas fa-check-circle fa-fw"></i> View</li>
+    </a>
   </ul>
 </div>

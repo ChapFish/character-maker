@@ -1,3 +1,14 @@
 .main{
   margin-left: 200px;
 }
+@media print {
+  .main{
+    margin: 0 !important;
+  }
+  app-sidebar{
+    display: none;
+  }
+  app-status-view{
+    display: none;
+  }
+}

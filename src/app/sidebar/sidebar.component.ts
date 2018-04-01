@@ -12,4 +12,14 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectedStatus = [true, false, false, false];
+
+  onSelect(item: number): boolean {
+    return this.selectedStatus[item];
+  }
+  selecting(item: number): void{
+    this.selectedStatus = [false, false, false, false];
+    this.selectedStatus[item] = true;
+  }
+
 }

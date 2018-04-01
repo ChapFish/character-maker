@@ -1,0 +1,57 @@
+<div class="character card">
+  <h2>Set your searcher's character for the role play.</h2>
+  <p>個性的な探索者になるようにできるだけ詳しく設定を作り込みましょう。能力値や技能と矛盾がないよう、慎重に。
+    <br>設定は具体的であればあるほどロールプレイがしやすくなります。</p>
+  <form class="character-form clearfix">
+    <div class="section first-section">
+      <div class="form-container">
+        <h3>基本情報</h3>
+        <div *ngFor="let item of basicInformation">
+          <label for={{item}}>{{basicInformationLabel[item]}}</label>
+          <input id={{item}} [(ngModel)]="searcher[item]" name={{item}}>
+        </div>
+        <h3>収入と財産</h3>
+        <div *ngFor="let item of assetInformation">
+          <label for={{item}}>{{assetInformationLabel[item]}}</label>
+          <input id={{item}} [(ngModel)]="searcher[item]" name={{item}}>    
+        </div>
+        <h3>探索者の経歴</h3>
+        <div>
+          <label for="history">経歴</label><br>
+          <textarea id="history" [(ngModel)]="searcher['history']" name="history" class="history"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="section second-section">
+      <div class="form-container">
+        <h3>探索者のデータ</h3>
+        <div *ngFor="let item of detailInformation">
+          <label for={{item}}>{{detailInformationLabel[item]}}</label><br>
+          <textarea id={{item}} [(ngModel)]="searcher[item]" name={{item}}></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="section third-section">  
+      <div class="form-container">
+        <h3>冒険の装備と所持品</h3>
+        <div>
+          <label for="belongings">装備・所持品など</label><br>
+          <textarea id="belongings" [(ngModel)]="searcher['belongings']" name="belongings"></textarea>
+        </div>
+        <h3>神話的経験</h3>
+        <div *ngFor="let item of cthulhuInformation">
+          <label for={{item}}>{{cthulhuInformationLabel[item]}}</label><br>
+          <textarea id={{item}} [(ngModel)]="searcher[item]" name={{item}}></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="card">
+    <h2>
+      Check the Character Sheet!
+    </h2>
+    <p>
+      これで決めなければならない事項は全て決めました。サイドバーから「View」に進んでキャラクターシートを確認し、冒険に備えましょう。
+    </p>
+  </div>

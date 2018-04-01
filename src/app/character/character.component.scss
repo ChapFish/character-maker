@@ -1,0 +1,27 @@
+.section{
+  float: left;
+  width: 30%;
+  margin-left: 10px;
+  .form-container{
+    width: 300px;
+    margin: 0 auto;
+  }
+  h3{
+    margin: 20px 0 10px 0;
+  }
+  input{
+    margin-top: 15px;    
+    border: none;
+    border-bottom: 1px solid;
+  }
+  textarea{
+    width: 300px;
+    height: 70px;
+  }
+  .history{
+    height: 140px;
+  }
+}
+.section:not(:first-child){
+  border-left: solid 1px #bfbfbf;
+}
